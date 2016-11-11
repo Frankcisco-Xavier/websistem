@@ -1,0 +1,37 @@
+$def with(datos)
+<html>
+    <heder></heder>
+    <body>
+        <p><h3><a href="/index">Regresar</a></h3></p>
+        <h1><P ALIGN=center>PROFECO</P></h1>
+
+
+<script src="https://frankcisco-xavier.carto.com/viz/eb5d5540-a6ec-11e6-9de3-0e3ebc282e83/map#">
+</script>
+
+<script>
+function iniciar() {
+var mapOptions = {
+center: new google.maps.LatLng(25.80, -80.30),
+zoom: 10,
+mapTypeId: google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("map"),mapOptions);}              
+</script>
+
+<div id="map"></div>
+  
+
+
+        <script type="text/javascript"src=""></script>
+        <table border="2px" bordercolor="blue" ALIGN=center>
+        <td width='100'><strong>Cadena Comercial</strong></td>
+        <td width='100'><strong>Producto</strong></td>
+        <td width='100'><strong>Precio</strong></td>
+           </tr>
+           <tr>
+            $for row in datos:
+            <td>$row[0]<td>$row[1]<td>$row[2]</td></td></td>
+            </tr>
+        </table>
+    </body>
+</html>
